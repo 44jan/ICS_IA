@@ -1,0 +1,38 @@
+2.1 `saludo` está en minúscula, así que React lo trata como una etiqueta HTML y no como un componente. Da aviso en consola y no se renderiza bien.
+```jsx
+export function Saludo() {
+  return <p>¡Hola, clase!</p>;
+}
+```
+
+2.2 Hay dos elementos raíz. Da error de sintaxis.
+```jsx
+export function Tarjeta() {
+  return (
+    <>
+      <h2>Desarrollo Web en Entorno Cliente</h2>
+      <p>Segundo curso de DAW</p>
+    </>
+  );
+}
+```
+
+2.3 `Pie` no está exportado, pero se importa con llaves.
+```jsx
+export function Pie() {
+  return <footer>© Departamento de Informática</footer>;
+}
+```
+
+2.4 `Cabecera` tiene exportación con nombre, pero se importa como default.
+```jsx
+import { Cabecera } from './Cabecera';
+```
+
+2.5 Faltan las llaves, así que se muestra el texto literal "anioActual".
+```jsx
+export function Fecha() {
+  var anioActual = new Date().getFullYear();
+  return <p>Estamos en el año {anioActual}</p>;
+}
+```
