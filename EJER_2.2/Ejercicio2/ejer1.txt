@@ -1,0 +1,63 @@
+1. ¿En qué archivo está el punto de entrada de la aplicación? ¿Qué hace la función `createRoot`?**
+
+
+
+Esta en el archivo src/main.jsx. la función createRoot crea la raíz de React sobre un elemento del DOM.
+
+
+
+
+
+2. ¿Cuál es el ID del elemento HTML donde se monta la aplicación? ¿En qué archivo está definido?**
+
+
+
+El ID es root y esta definido en index.html
+
+
+
+
+
+3. Dibuja el árbol de componentes que se renderiza al arrancar el proyecto recién creado.**
+
+
+
+StrictMode
+\- App
+
+
+
+
+
+4. ¿Qué ocurre en la página si eliminas `<StrictMode>` de `main.jsx`? ¿Y en la consola en modo desarrollo?**
+
+
+
+Si quitas <StrictMode>, la página se ve igual. La diferencia está en que StrictMode hace comprobaciones extra. Sin él, React lo hace todo una sola vez y esos avisos desaparecen.
+
+
+
+
+
+5. Abre `App.jsx` y localiza tres fragmentos de código JavaScript escritos entre llaves `{ }` dentro del JSX. Explica qué hace cada uno.**
+
+
+
+\- `{reactLogo}` en `src={reactLogo}`: inserta la ruta de la imagen importada.
+
+\- `{count}` en el botón: muestra el valor actual del contador.
+
+\- `{() => setCount((count) => count + 1)}` en `onClick`: al hacer clic, suma 1 al contador.
+
+
+
+
+
+6. ¿Qué es el elemento `<>` que envuelve el JSX devuelto por `App`? ¿Genera algún elemento en el DOM? Compruébalo con las herramientas de desarrollo del navegador (pestaña \*Elementos\*).**
+
+
+
+Es un Fragment: agrupa varios elementos sin añadir ningún nodo al DOM. En la pestaña Elementos los hijos aparecen directamente dentro de `#root`.
+
+
+
